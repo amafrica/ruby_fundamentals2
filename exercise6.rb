@@ -28,4 +28,13 @@ x = gets
 # Grocery counts
 puts grocery_list.count
 
-#
+# Banana output
+def got_bananas(bananas, list)
+  if list.include?(bananas)
+    puts "You need to pick up bananas"
+  else
+    puts "You don't need to pick up bananas"
+  end
+end
+
+got_bananas("bananas", grocery_list)
