@@ -2,27 +2,28 @@ grocery_list = ["carrots", "toilet paper", "apples", "salmon"]
 
 
 # Add asterisk to each item
-
-grocery_list.each do |grocery_list|
-  puts "* #{grocery_list}"
+def shop (list)
+  list.each do |item|
+    puts "* #{item}"
+  end
 end
+shop (grocery_list)
 
 
 # Add rice to list
-puts "Did you forget anything?"
-x = gets
+# puts "Did you forget anything?"
+# x = gets
 
-# grocery list << "rice"
- def add_list ( list, x )
-   list << x
-  list.each do |item|
-     puts "* #{item}"
-   end
-   puts "Did you forget anything?"
-   x = gets
- end
+# # grocery list << "rice"
+#  def add_list ( list, x )
+   grocery_list.push("rice")
+   puts "Rice has been added"
+   shop (grocery_list)
+ #   puts "Did you forget anything?"
+ #   x = gets
+ # # end
 
- add_list(grocery_list, x)
+ # add_list (grocery_list, x)
 
 
 # Grocery counts
@@ -38,3 +39,15 @@ def got_bananas(bananas, list)
 end
 
 got_bananas("bananas", grocery_list)
+
+
+# DISPLAY
+puts grocery_list[1]
+
+# ALPHABETICAL ORDER
+shop (grocery_list).sort
+
+#salmon
+grocery_list.delete("salmon")
+puts "Salmon has been deleted"
+shop (grocery_list)
